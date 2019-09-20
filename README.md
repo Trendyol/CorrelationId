@@ -1,2 +1,2 @@
 # CorrelationId
-CorrelationId middleware for Dotnet projects.
+CorrelationId middleware for Dotnet projects
