@@ -1,17 +1,14 @@
 # Correlation ID Middleware
 
-[![NuGet](https://img.shields.io/nuget/v/TY.CorrelationId.svg)](https://www.nuget.org/packages/TY.CorrelationId)
-[![NuGet](https://img.shields.io/nuget/dt/TY.CorrelationId.svg)](https://www.nuget.org/packages/TY.CorrelationId)
-
 This repo contains middleware for syncing a TraceIdentity (correlation ID) across ASP.NET Core APIs.
 
 This is intended for cases where you have multiple API services that may pass a single user request (transaction) through a chain of APIs in order to satisfy the final result. For example, a front end API may be called from a browser, which then in turn calls a backend API to gather some required data.
 
 The TraceIdentifier on the HttpContext will be used for new requests and additionally set a header on the response. In cases where the incoming request includes an existing correlation ID in the header, the TraceIdentifier will be updated to that ID. This allows logging and diagnostics to be correlated for a single user transaction and to track the path of a user request through multiple API services.
 
-This repository forked from stevejgordon CorrelationID repository. 
+This repository forked version of stevejgordon CorrelationID repository. 
 
-I added Correlationid and UserAgent headers to outgoing http calls to keep simple tracking through api to api calls. It uses stevejgordon correlation context for adding correlation id to outgoing http headers.  
+I added CorrelationId headers to outgoing http calls to keep simple tracking through api to api calls. It uses correlation context for adding correlation id to outgoing http headers.  
 
 HttpClient registiration is wrapped not to add outgoing delegating handlers every HttpClient object.
 
