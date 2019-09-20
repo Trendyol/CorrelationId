@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Trendyol.CorrelationId</id>
+    <version>1.0.0</version>
+    <title>TY.CorrelationId</title>
+    <authors>Huseyin Ulas</authors>
+    <owners>Huseyin Ulas</owners>
+    <projectUrl>https://github.com/Trendyol/CorrelationId</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Trendyol.CorrelationId</description>
+    <summary>Trendyol.CorrelationId</summary>
+    <copyright></copyright>
+    <tags></tags>
+    <dependencies>
+    <dependency  id="Microsoft.AspNetCore.Mvc.Core" version="2.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\CorrelationId.dll"  target="lib/dotnet" />
+  </files>
+</package>
